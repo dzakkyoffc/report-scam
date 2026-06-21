@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Scam - Telegram Account Reporter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <h1>REPORT<span>SCAM</span></h1>
+            </div>
+            <p class="tagline">Mass Report Telegram Scammer</p>
+        </header>
+
+        <!-- Warning Banner -->
+        <div class="warning-banner">
+            ⚠️ Gunakan dengan bijak! Hanya untuk akun scam/fraud!
+        </div>
+
+        <!-- Form Report -->
+        <section class="report-section">
+            <h2 class="section-title">🎯 Report Target</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label>Username Target</label>
+                    <div class="input-group">
+                        <span class="input-prefix">@</span>
+                        <input type="text" id="username" placeholder="scammer_username" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>User ID (opsional)</label>
+                    <input type="text" id="userId" placeholder="123456789">
+                </div>
+
+                <div class="form-group">
+                    <label>Alasan Report</label>
+                    <select id="reason" required>
+                        <option value="">-- Pilih Alasan --</option>
+                        <option value="scam">Scam / Penipuan</option>
+                        <option value="fake">Fake Account</option>
+                        <option value="spam">Spam</option>
+                        <option value="impersonation">Impersonation / Nyamar</option>
+                        <option value="copyright">Copyright Infringement</option>
+                        <option value="violence">Kekerasan</option>
+                        <option value="illegal">Konten Ilegal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Bukti (Link Screenshot)</label>
+                    <input type="url" id="evidence" placeholder="https://imgur.com/xxx">
+                </div>
+
+                <div class="form-group">
+                    <label>Deskripsi</label>
+                    <textarea id="description" rows="4" placeholder="Ceritakan kronologi penipuannya..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Platform Target</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="platform" value="telegram" checked> Telegram
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="platform" value="whatsapp"> WhatsApp
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="platform" value="instagram"> Instagram
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-report">
+                    🚨 REPORT SCAMMER
+                </button>
+            </form>
+        </section>
+
+        <!-- Report Counter -->
+        <section class="counter-section">
+            <h2 class="section-title">📊 Live Report Stats</h2>
+            <div class="counter-grid">
+                <div class="counter-box">
+                    <span class="counter-number" id="totalReports">0</span>
+                    <span class="counter-label">Total Reports</span>
+                </div>
+                <div class="counter-box">
+                    <span class="counter-number" id="todayReports">0</span>
+                    <span class="counter-label">Today Reports</span>
+                </div>
+                <div class="counter-box">
+                    <span class="counter-number" id="bannedCount">0</span>
+                    <span class="counter-label">Banned Accounts</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Methods -->
+        <section class="methods-section">
+            <h2 class="section-title">🔧 Cara Report Tambahan</h2>
+            <div class="method-grid">
+                <a href="https://t.me/SpamBot" target="_blank" class="method-card">
+                    <span class="method-icon">🤖</span>
+                    <h4>@SpamBot</h4>
+                    <p>Forward pesan spam ke bot ini</p>
+                </a>
+                <a href="https://t.me/NoToScam_bot" target="_blank" class="method-card">
+                    <span class="method-icon">🚫</span>
+                    <h4>@NoToScam</h4>
+                    <p>Report scammer via bot</p>
+                </a>
+                <a href="mailto:abuse@telegram.org" class="method-card">
+                    <span class="method-icon">📧</span>
+                    <h4>Email Abuse</h4>
+                    <p>abuse@telegram.org</p>
+                </a>
+                <a href="https://telegram.org/support" target="_blank" class="method-card">
+                    <span class="method-icon">🌐</span>
+                    <h4>Support Form</h4>
+                    <p>telegram.org/support</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- List Reported -->
+        <section class="reported-section">
+            <h2 class="section-title">📋 Recently Reported</h2>
+            <div class="reported-list" id="reportedList">
+                <div class="empty-state">
+                    <span>🔍</span>
+                    <p>Belum ada report</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 ReportScam | This site is for educational purposes only</p>
+            <p class="disclaimer">⚠️ Fake report ke akun innocent bisa berakibat hukum!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
